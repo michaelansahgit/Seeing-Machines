@@ -1,0 +1,34 @@
+# ---- Large files: NEVER commit (exceed GitHub's 100 MB per-file limit) ----
+# The Cache/ folder holds a 3.2 GB model shard + a 116 MB zip.
+Cache/
+*.safetensors
+*.zip
+*.bin
+*.pt
+*.ckpt
+
+# ---- Python / Jupyter ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- OS / editor cruft ----
+.DS_Store
+.vscode/
+.idea/
+
+# ---- scratch / temp ----
+scratchpad/
+*.tmp
+data/corpus/
+data/corpus_rendered/
+data/pbr_maps/
+data/corpus/
+data/corpus_rendered/
+data/pbr_maps/
+data/corpus/
+data/corpus_rendered/
+data/pbr_maps/
+
+# editor backups
+*.bak

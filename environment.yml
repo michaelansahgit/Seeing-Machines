@@ -1,0 +1,36 @@
+# Conda environment for the "Seeing Machines" final project (local machine).
+#
+# This env runs everything that fits on an 8 GB Apple-Silicon Mac:
+#   - L1: CLIP/SigLIP image+text embedding and retrieval
+#   - L2/L3 (local half): caption-text embedding, hybrid fusion, precision@k eval, Gradio UI
+#
+# The heavy VLM captioning (Gemma 3 4B, 4-bit) does NOT run here — it is CUDA-only and
+# is shipped as Colab-ready cells (see colab/). This env only *consumes* the cached caption JSON.
+name: seeing-machines
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # --- core ML / embeddings ---
+      - torch                 # arm64 wheel includes Apple MPS acceleration
+      - open_clip_torch       # CLIP + SigLIP with one clean encode_image/encode_text API
+      - sentence-transformers # small text embedder for caption retrieval (L2)
+      - transformers
+      # --- data ---
+      - datasets              # streams MatSynth from the Hugging Face Hub
+      - huggingface_hub
+      - pillow
+      - numpy
+      - pandas
+      - scikit-learn          # cosine_similarity helper + precision@k bookkeeping
+      # --- interface + viz ---
+      - gradio
+      - matplotlib
+      # --- notebook plumbing ---
+      - jupyterlab
+      - nbconvert
+      - nbformat
+      - ipykernel
+      - tqdm

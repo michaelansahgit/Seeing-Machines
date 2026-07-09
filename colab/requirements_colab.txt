@@ -1,0 +1,9 @@
+# Extra packages needed ONLY on Colab for the Gemma 3 4B VLM steps (L2.3 captioning, L3.3 multimodal).
+# The local conda env (environment.yml) deliberately omits these — bitsandbytes is CUDA-only.
+# Pin to the course notebook's versions if they differ from these.
+transformers>=4.50
+accelerate>=0.34
+bitsandbytes>=0.43
+sentencepiece
+pillow
+datasets

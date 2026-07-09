@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seeing Machines — A Multimodal Archive Companion</title>
+<style>
+  :root{ --ink:#1a1a1a; --mut:#5b6470; --line:#e6e9ee; --bg:#ffffff;
+         --accent:#3a5a8c; --green:#2e7d32; --red:#c62828; --purple:#7b3fb0; --chip:#f2f5fa; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+       line-height:1.62;font-size:17px;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px;}
+  header{padding:60px 0 26px;text-align:center;border-bottom:1px solid var(--line);}
+  h1{font-size:2.35rem;line-height:1.15;margin:0 0 10px;font-weight:800;letter-spacing:-.5px;}
+  .sub{color:var(--mut);font-size:1.06rem;margin:0 0 18px;}
+  .authors{font-size:1.05rem;margin:6px 0;}
+  .meta{color:var(--mut);font-size:.95rem;}
+  .chips{margin:20px 0 4px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;
+        padding:6px 14px;font-size:.86rem;color:var(--accent);text-decoration:none;}
+  .chip:hover{background:#e7edf6;}
+  .tagline{font-size:1.15rem;color:var(--ink);margin:26px 0 8px;font-style:italic;text-align:center;}
+  h2{font-size:1.5rem;margin:52px 0 8px;font-weight:750;letter-spacing:-.2px;}
+  h2 .lvl{font-size:.7rem;vertical-align:middle;background:var(--accent);color:#fff;
+          border-radius:6px;padding:3px 8px;margin-left:8px;font-weight:700;letter-spacing:.5px;}
+  h3{font-size:1.13rem;margin:30px 0 6px;font-weight:700;}
+  p{margin:12px 0;}
+  figure{margin:26px 0;text-align:center;}
+  figure img{max-width:100%;border:1px solid var(--line);border-radius:10px;}
+  figure.plain img{border:none;}
+  figcaption{color:var(--mut);font-size:.9rem;margin-top:9px;text-align:left;}
+  .rel-g{color:var(--green)} .rel-r{color:var(--red)} .rel-n{color:#555}
+  table{border-collapse:collapse;width:100%;margin:18px 0;font-size:.95rem;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:center;}
+  th{background:var(--chip);font-weight:700;}
+  td.route{text-align:left;font-weight:600;}
+  .best{background:#eef7ee;font-weight:700;}
+  .leak{background:#fdecec;color:#9a2b2b;}
+  .note{background:#fff8e6;border:1px solid #eee0af;border-radius:10px;padding:14px 18px;
+        font-size:.95rem;color:#6b5a1e;margin:20px 0;}
+  .callout{background:#f4f7fb;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+           padding:12px 18px;margin:20px 0;font-size:.97rem;}
+  ul,ol{padding-left:22px;} li{margin:6px 0;}
+  code{background:var(--chip);padding:1px 6px;border-radius:5px;font-size:.88em;}
+  a{color:var(--accent);}
+  hr{border:none;border-top:1px solid var(--line);margin:46px 0;}
+  footer{color:var(--mut);font-size:.9rem;text-align:center;padding:40px 0 60px;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:640px){.two{grid-template-columns:1fr;} h1{font-size:1.8rem;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Seeing Machines</h1>
+  <p class="sub">A Multimodal Archive Companion — searching, questioning, and evaluating a library of material textures</p>
+  <p class="authors"><b>Michael Ansah</b></p>
+  <p class="meta">Level 3 · “The Critic” &nbsp;·&nbsp; CompSci for Designers 2 &nbsp;·&nbsp; MA Design for Digital Futures, TH Nürnberg &nbsp;·&nbsp; Summer 2026</p>
+  <div class="chips">
+    <a class="chip" href="#abstract">Abstract</a>
+    <a class="chip" href="#corpus">Corpus</a>
+    <a class="chip" href="#approach">Approach</a>
+    <a class="chip" href="#atlas">Retrieval atlas</a>
+    <a class="chip" href="#compare">Two routes</a>
+    <a class="chip" href="#dossier">Mis-seeing</a>
+    <a class="chip" href="#eval">Evaluation</a>
+    <a class="chip" href="#reflection">Reflection</a>
+    <a class="chip" href="#limits">Limitations</a>
+    <a class="chip" href="#exp2">Experiment 2</a>
+  </div>
+</header>
+
+<p class="tagline">“When you know your archive intimately, you notice the moment the machine sees something that isn’t there.”</p>
+<figure class="plain">
+  <img src="assets/teaser.png" alt="A montage of MatSynth material textures">
+  <figcaption>A slice of the corpus: 300 tileable PBR material textures from MatSynth — texture without objects, which turns out to be an unusually honest stress-test for a vision model.</figcaption>
+</figure>
+
+<!-- ABSTRACT -->
+<h2 id="abstract">Abstract</h2>
+<p>
+This project extends a text retrieval-augmented-generation pipeline into the visual domain over a curated
+archive of <b>300 physically-based material textures</b>. It builds and <b>measures</b> three retrieval
+routes: a <b>CLIP joint-embedding search</b> (L1); a <b>caption-mediated route</b> where <b>Gemma 3 4B</b>
+describes every image and retrieval runs over that text (L2); and a <b>hybrid</b> that fuses the two, scored
+with <b>precision@k</b> against MatSynth’s own category labels (L3). The headline result is a clean,
+falsifiable one: with <i>real</i> VLM captions, the caption route is <b>worse</b> than plain CLIP
+(P@5 0.37 vs 0.54), hybrid fusion yields <b>no improvement</b> (optimal weight α = 1.0 = pure CLIP), and
+Gemma names the wrong material <b>~43 % of the time</b>. The project treats that failure — and its mechanism —
+as the main finding.
+</p>
+
+<!-- MOTIVATION / CORPUS -->
+<h2 id="corpus">Motivation &amp; corpus statement</h2>
+<p>
+The brief asks for “a collection you know intimately.” I work with <b>PBR materials</b> constantly in 3-D and
+shader work, so a material library is an archive I read fluently — I can tell at a glance when a result is
+wrong, which is exactly the machine mis-seeing the project hunts for. Materials are also revealing precisely
+because they are <b>texture without objects</b>: no faces, no scenes, no web-caption priors. A model that has
+truly learned “rust”, “weave”, or “veining” retrieves well; one leaning on object/scene priors stumbles.
+</p>
+<p>
+<b>The corpus.</b> The base-color (albedo) map of <b>300 materials</b> drawn from
+<a href="https://huggingface.co/datasets/gvecchio/MatSynth">MatSynth</a>, spanning all 13 categories,
+downscaled from 4096 px to 512 px. 300 is the assignment’s Level-3 ceiling and gives enough per-category mass
+for a meaningful precision@k.
+</p>
+<div class="callout">
+<b>An honest caveat, stated up front.</b> This is a public, pre-labelled dataset, not photographs I shot. I
+lean into that rather than hide it: the built-in <code>category</code> and <code>tags</code> labels become
+<b>objective ground truth</b> for the L3 evaluation — something a folder of personal photos couldn’t give
+without hand-labelling. The archive is “mine” by fluency, not by authorship.
+</div>
+<figure><img src="assets/category_dist.png" alt="Category distribution">
+  <figcaption>Composition of the 300-material corpus. It inherits the source’s imbalance — stone (42), wood
+  (40) and metal (39) dominate; marble and plaster sit at 13. This matters when reading the evaluation.</figcaption>
+</figure>
+
+<!-- APPROACH -->
+<h2 id="approach">Approach</h2>
+<p>
+Everything expensive is computed <b>once and cached to Google Drive</b>: CLIP embeddings, Gemma captions, and
+caption embeddings. The notebook re-runs from cache without a GPU. The Gemma captioning itself ran on a Colab
+T4 (4-bit); all retrieval, fusion and evaluation are CPU-friendly.
+</p>
+<figure class="plain"><img src="assets/pipeline.svg" alt="Pipeline diagram" style="max-width:100%">
+  <figcaption><b>Blue</b> = CLIP joint-embedding route (L1). <b>Green</b> = caption route: Gemma 3 4B writes a
+  structured description, embedded as text (L2). <b>Purple</b> = hybrid fusion + precision@k evaluation (L3).
+  Dashed arrows are cached lookups.</figcaption>
+</figure>
+<h3>The description schema (L2’s central design decision)</h3>
+<p>
+Instead of freeform captions I imposed a <b>structured schema</b> whose fields are the axes a designer
+searches materials on: <code>material_type</code>, <code>colors</code>, <code>surface_finish</code>,
+<code>pattern</code>, <code>condition</code>, <code>notable_features</code>, and a natural-language
+<code>caption</code> (the field that gets embedded). This is a deliberate, literature-grounded choice: it
+mirrors the <b>Describable Textures Dataset</b>’s controlled attribute vocabulary and the category-tree
+annotation used by <b>Make-it-Real</b>. Splitting the axes out also lets the mis-seeing dossier below check
+each one — did Gemma get the colour right but hallucinate the material?
+</p>
+
+<!-- ATLAS -->
+<h2 id="atlas">Results — the retrieval atlas <span class="lvl">L1</span></h2>
+<p>
+Does CLIP organise this corpus by material? A PCA of the 300 image embeddings says <b>only weakly</b>:
+same-category pairs sit at mean cosine <b>0.683</b> vs <b>0.635</b> for different-category pairs — a gap of
+just <b>+0.048</b>. Stripped of objects and context, materials share low-level colour and frequency
+statistics, so the categories bleed together.
+</p>
+<figure><img src="assets/embedding_space.png" alt="PCA of CLIP embeddings">
+  <figcaption>CLIP image-embedding space (PCA, 300 points). Wood and fabric form loose islands; metal, stone,
+  plaster and concrete overlap heavily — the visual root cause of the confusions below.</figcaption>
+</figure>
+<div class="two">
+  <figure><img src="assets/atlas_wood.png" alt="wood planks">
+    <figcaption><b>“wood planks” — clean win.</b> All five results are wood (0.28–0.31). A distinctive,
+    well-represented visual concept CLIP nails.</figcaption></figure>
+  <figure><img src="assets/atlas_marble.png" alt="marble">
+    <figcaption><b>“polished marble with veins” — win.</b> Marble takes the top three; the tail softens into
+    pale wood/stone as vein contrast washes out at 224 px.</figcaption></figure>
+  <figure><img src="assets/atlas_woven.png" alt="woven fabric">
+    <figcaption><b>“woven fabric texture” — instructive failure.</b> The top two are <span class="rel-r">ceramic</span>
+    tiles, not fabric — a regular tile grid and a cloth weave are the same frequency pattern to CLIP.</figcaption></figure>
+  <figure><img src="assets/atlas_rust.png" alt="rusty metal">
+    <figcaption><b>“rusty corroded metal” — right, then leaky.</b> A <span class="rel-r">stone</span> edges out
+    metal at the top; warm mottled colour pulls in non-metals, because rust’s colour is a stronger cue than its
+    substrate.</figcaption></figure>
+  <figure><img src="assets/atlas_cozy.png" alt="soft and cozy">
+    <figcaption><b>“something soft and cozy” — abstract probe.</b> No material noun; scores collapse to ~0.20.
+    CLIP guesses via connotation (fabric appears) but the flat scores show low confidence.</figcaption></figure>
+  <figure><img src="assets/atlas_number7.png" alt="number 7">
+    <figcaption><b>“a photo of the number 7” — adversarial.</b> The concept is absent, yet CLIP returns its
+    least-bad guess at ~0.24. The canonical argument for a similarity threshold.</figcaption></figure>
+</div>
+
+<!-- COMPARE -->
+<h2 id="compare">Results — CLIP route vs caption route <span class="lvl">L2</span></h2>
+<p>
+The caption route reads each image with <b>Gemma 3 4B</b>, writes the structured description, and retrieves
+over that text. The hypothesis was that it would win on <i>reasoning</i> queries. In practice, on raw albedo
+maps it mostly <b>loses</b> — and the side-by-side shows why.
+</p>
+<div class="two">
+  <figure><img src="assets/compare_clip.png" alt="CLIP man-made material">
+    <figcaption><b>CLIP:</b> “a man-made building material” → misc/stone/terracotta at a weak ~0.24.</figcaption></figure>
+  <figure><img src="assets/compare_caption.png" alt="Caption man-made material">
+    <figcaption><b>Caption route:</b> same query → mostly <span class="rel-r">wood</span> at 0.43 — it latched
+    onto a word association in the captions rather than the concept. The caption route is only as good as the
+    captions, and here they are noisy.</figcaption></figure>
+</div>
+
+<!-- DOSSIER -->
+<h2 id="dossier">Results — the mis-seeing dossier <span class="lvl">L2</span></h2>
+<p>
+Because the schema records <code>material_type</code>, we can automatically audit it against MatSynth’s
+ground-truth category. The result is stark: Gemma assigns the <b>wrong material in 130 / 300 cases (43 %)</b>,
+and in <b>18 cases (6 %)</b> the <code>material_type</code> is not even a material word — it returns a
+<i>colour</i> (“dark green”). On delit albedo maps, the model reads <b>colour, not material</b>.
+</p>
+<figure><img src="assets/misseeing.png" alt="mis-seeing examples">
+  <figcaption>Confident mis-seeing. A green <b>plastic</b> becomes “a dark green surface”; <b>corten steel</b>
+  becomes “weathered concrete”; <b>concrete</b> becomes “weathered ground”. Every such error is baked
+  permanently into the caption index — a wrong “concrete” makes that metal findable by the wrong query forever.</figcaption>
+</figure>
+<div class="note">
+<b>Honesty note.</b> Not every mismatch is a true error — some are label coarseness (Gemma’s “brick” vs
+MatSynth’s “terracotta” is arguably correct). I excluded that alias from the dossier count. But even after
+that, the 43 % material-error rate is the dominant signal, and it fully explains the evaluation below.
+</div>
+
+<!-- EVAL -->
+<h2 id="eval">Results — evaluation <span class="lvl">L3</span></h2>
+<p>
+A gold set of <b>25 queries</b> with known-correct images (from category and tag labels) is scored with
+precision@k across the routes. The hybrid fuses CLIP and Gemma-caption scores as
+<code>α·CLIP + (1−α)·caption</code> after per-query min-max normalisation, with α exposed as a live slider in
+the interface.
+</p>
+<table>
+  <tr><th>Route</th><th>P@1</th><th>P@3</th><th>P@5</th><th>P@10</th></tr>
+  <tr><td class="route">CLIP-only</td><td>0.640</td><td>0.573</td><td class="best">0.536</td><td>0.428</td></tr>
+  <tr><td class="route">Caption-only (real Gemma)</td><td>0.320</td><td>0.373</td><td>0.368</td><td>0.360</td></tr>
+  <tr><td class="route">Gemma “stub-format”</td><td>0.440</td><td>0.373</td><td>0.424</td><td>0.384</td></tr>
+  <tr><td class="route">Hybrid α = 0.5</td><td>0.560</td><td>0.560</td><td>0.496</td><td>0.468</td></tr>
+  <tr class="leak"><td class="route">Metadata stub *</td><td>0.960</td><td>0.933</td><td>0.888</td><td>0.840</td></tr>
+</table>
+<p style="font-size:.9rem;color:var(--mut)">* The metadata stub is built <i>from</i> the labels being scored — its score is <b>evaluation leakage</b>, not skill. It is shown only to make that leakage visible.</p>
+<figure class="plain"><img src="assets/colab_l3_precision.png" alt="precision@k and alpha sweep">
+  <figcaption>Left: precision@k by route. Right: the fusion sweep peaks at <b>α = 1.0</b> — pure CLIP. Because
+  the real caption route is strictly weaker, the optimal blend is to ignore it: fusion buys nothing here.</figcaption>
+</figure>
+
+<h3>Deductions</h3>
+<ol>
+  <li><b>CLIP-only is the strongest honest route</b> (P@5 = 0.536). Matching the query to pixels beats
+  round-tripping through Gemma’s words.</li>
+  <li><b>The real caption route is <i>worse</i> than CLIP</b> (0.368), reversing the flattering picture a stub
+  caption would give. Captioning an albedo map discards more than it adds.</li>
+  <li><b>Hybrid fusion gives no benefit</b> (best α = 1.0). Fusion only helps when routes are comparably good
+  with uncorrelated errors; here one route is simply weaker. An honest <b>negative result</b>.</li>
+  <li><b>The mechanism:</b> albedo maps are <i>delit</i> (no shading/specular cues) and out-of-distribution, so
+  Gemma reads <b>colour, not material</b> — the 43 % mis-seeing rate is the direct cause of the caption route’s
+  weakness.</li>
+</ol>
+
+<!-- REFLECTION -->
+<h2 id="reflection">Reflection</h2>
+<p>
+The most useful thing this project taught me is to distrust the flattering version of a result. My first run
+used a metadata-derived “stub” caption and the caption route looked <i>excellent</i> (P@5 ≈ 0.89) — because it
+was quietly retrieving on the very labels I was scoring against. Only the real Gemma pass revealed the truth:
+reading a flat albedo map, a small VLM mostly sees colour, and the honest caption route <i>underperforms the
+CLIP baseline</i>. The interesting deliverable stopped being “a working chatbot” and became “a measured account
+of why the obvious idea doesn’t work here, and what would fix it.”
+</p>
+<p>
+It also grounded a literature point I’d otherwise have missed: the systems that <i>do</i> caption PBR materials
+successfully (MatPedia, Make-it-Real) caption <b>rendered</b> materials, not raw albedo. My failure is their
+design choice stated in reverse.
+</p>
+
+<!-- LIMITATIONS -->
+<h2 id="limits">Limitations</h2>
+<ul>
+  <li><b>Base-color only.</b> I embed the albedo and discard normal/roughness/height — the micro-surface cues a
+  material artist relies on, and the ones a VLM could use to judge finish.</li>
+  <li><b>Delit input is worst-case for the VLM.</b> Captioning a flat map (rather than a lit render) is exactly
+  the setting where a VLM defaults to colour — my caption route is a lower bound, not the VLM’s ceiling.</li>
+  <li><b>The metric is blunt.</b> precision@k ignores rank order within top-k and ignores recall; several tag
+  queries have large relevant sets (rough = 69, dark = 71), inflating absolute precision. Read the numbers as a
+  <i>relative</i> comparison across routes on one fixed gold set.</li>
+  <li><b>Label-defined relevance.</b> Ground truth is MatSynth’s categories/tags; a perceptually reasonable
+  retrieval that crosses a label boundary scores as wrong (and some Gemma “errors” are label coarseness).</li>
+</ul>
+
+<h3>What I’d build next</h3>
+<p>
+<b>Render, then caption.</b> Bake each material onto a lit sphere and caption <i>that</i> — the single change
+the literature predicts would cut the 43 % mis-seeing rate and could finally make the caption route
+competitive. Second: a <b>DINOv2</b> texture-feature baseline to quantify the true ceiling on material
+separability, and a small <b>material-CLIP fine-tune</b> on (rendered material, schema-caption) pairs, the
+recipe proven by <i>The Visual Language of Fabrics</i>. <b>The first of these — render, then caption — I actually
+built; it is Experiment 2 below.</b>
+</p>
+
+<hr>
+<!-- EXPERIMENT 2 -->
+<h2 id="exp2">Experiment 2 — Render, then caption <span class="lvl">BEYOND</span></h2>
+<p>
+Experiment 1 ended on an honest negative result: on <b>delit albedo maps</b> a small VLM reads
+<i>colour, not material</i> (~43 % mis-seeing), so the caption route loses to CLIP and fusion buys nothing.
+The Limitations section named the fix the literature endorses (MatPedia, Make-it-Real): <b>render the material
+first, then caption the render.</b> Experiment 2 builds exactly that — changing <b>one variable only</b> (the
+input image) and re-running the identical pipeline (same CLIP model, same Gemma schema, same gold set, same
+precision@k). Every artifact is duplicated with a <code>_rendered</code> suffix so Experiment 1 stays intact
+for a clean side-by-side.
+</p>
+<figure class="plain"><img src="assets/exp2_teaser.png" alt="Grid of Mitsuba-rendered material spheres">
+  <figcaption>Each material's full PBR stack rendered onto a lit sphere — the new input to the same pipeline.</figcaption>
+</figure>
+<div class="callout">
+🖥️ <b>The one step beyond Colab.</b> Each material's full PBR stack — <b>base-color + normal + roughness +
+metallic</b>, re-fetched from MatSynth — is rendered onto a lit sphere with <b>Mitsuba 3</b> under a fixed
+in-code studio environment (one warm key light, one cool fill, held constant across all 89 materials so only the
+material changes). Mitsuba's <code>cuda_ad_rgb</code> path needs a local NVIDIA GPU, so this is the <b>only</b>
+part of the project that does not run on the free Colab tier — it was produced on my laptop's <b>RTX A1000
+(6 GB)</b>. The renders are cached to <code>data/corpus_rendered/</code>, so everything downstream stays
+Colab-reproducible with no GPU.
+</div>
+<figure><img src="assets/exp2_pairs.png" alt="Albedo vs rendered comparison pairs">
+  <figcaption>Left of each pair: the flat, delit albedo (Experiment 1 input). Right: the Mitsuba render
+  (Experiment 2 input) — base-color → a <code>principled</code> BSDF, roughness/metallic maps set reflectance,
+  the normal map adds mesostructure.</figcaption>
+</figure>
+
+<h3>Result 1 — the CLIP route (measured locally, real)</h3>
+<p>
+Both sides are recomputed on the <b>same 89-material corpus</b> with the <b>same 24-query gold set</b>, so the
+albedo baseline here (P@5 0.425) is that subset — <i>not</i> the 300-material headline from Experiment 1.
+</p>
+<table>
+  <tr><th>CLIP-only route</th><th>P@1</th><th>P@3</th><th>P@5</th><th>P@10</th></tr>
+  <tr><td class="route">Albedo (Exp 1 input)</td><td>0.500</td><td>0.486</td><td class="best">0.425</td><td>0.313</td></tr>
+  <tr><td class="route">Mitsuba render (Exp 2 input)</td><td class="best">0.583</td><td>0.486</td><td>0.358</td><td>0.300</td></tr>
+</table>
+<figure class="plain"><img src="assets/exp2_precision.png" alt="CLIP precision@k: albedo vs render">
+  <figcaption>CLIP precision@k, albedo vs rendered input, on the shared 89-material / 24-query setup.</figcaption>
+</figure>
+<p>
+<b>A rank-dependent trade, not a clean win.</b> Rendering improves the single best hit (P@1 0.500 → 0.583) but
+hurts deeper in the ranking (P@5 0.425 → 0.358). Mechanistically: the lit sphere gives CLIP a cleaner,
+higher-confidence <i>top</i> match, but the fixed grey background and spherical-UV distortion inject a shared,
+material-agnostic signal that pulls unrelated spheres together further down the list. For a joint-embedding
+model matching pixels to text, presentation is a double-edged cue.
+</p>
+
+<h3>Result 2 — the caption route (the actual hypothesis, pending Colab)</h3>
+<p>
+The literature's claim is about the <i>VLM</i>: a lit render gives it the finish and specular cues a flat map
+cannot. The test is to re-run the Gemma 3 4B pass over the renders and re-measure the 43 % material-error rate
+and the caption-route P@5 — GPU-VLM work that runs on Colab exactly as in Experiment 1.
+</p>
+<div class="callout">
+<b>Falsifiable prediction, stated in advance:</b> the mis-seeing rate should fall well below 43 %, and the
+caption-route P@5 should rise above its albedo value of 0.368 — and if it clears the CLIP baseline, hybrid
+fusion should for the first time prefer an α strictly inside (0, 1).
+</div>
+<div class="note">
+<b>Honesty note.</b> As submitted, the rendered <i>CLIP</i> numbers are real and reproducible on this machine;
+the rendered <i>caption / hybrid</i> numbers await the one Colab Gemma pass. The render is a single-view sphere
+preview, not the material's real-world appearance — so any recovery would be evidence that <i>lit context</i>,
+not photographic realism, is what the VLM needed.
+</div>
+
+<hr>
+<!-- REFERENCES -->
+<h2 id="refs">Sources &amp; references</h2>
+<ul>
+  <li>Vecchio &amp; Deschaintre, <b>MatSynth: A Modern PBR Materials Dataset</b>, CVPR 2024 —
+    <a href="https://huggingface.co/datasets/gvecchio/MatSynth">dataset (CC0/CC-BY)</a>.</li>
+  <li>Radford et al., <b>CLIP</b> (2021); <b>OpenCLIP</b> ViT-B-32 / <code>laion2b_s34b_b79k</code>.</li>
+  <li>Reimers &amp; Gurevych, <b>Sentence-Transformers</b> — <code>all-MiniLM-L6-v2</code>.</li>
+  <li><b>Gemma 3 4B</b> (Google DeepMind), 4-bit on Colab T4, for structured captioning.</li>
+  <li>Cimpoi et al., <b>Describing Textures in the Wild (DTD)</b>, CVPR 2014 — attribute-vocabulary basis for the schema.</li>
+  <li><b>Make-it-Real</b> (2024) &amp; <b>MatPedia</b> (2025) — VLM-captioned PBR material libraries (Qwen2.5-VL); caption <i>rendered</i> materials.</li>
+  <li>Project-page format after <a href="https://dreambooth.github.io">dreambooth.github.io</a>.</li>
+</ul>
+
+<footer>
+  Built for CompSci for Designers 2, TH Nürnberg · Summer 2026 · Colab notebook + cached artifacts (300
+  materials, real Gemma 3 4B captions) accompany this page.
+</footer>
+
+</div>
+</body>
+</html>

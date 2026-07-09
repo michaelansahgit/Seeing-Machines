@@ -1,0 +1,1014 @@
+{
+  "acg_plastic_009": {
+    "material_type": "plastic",
+    "colors": [
+      "green"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "dark, green, plastic, smooth",
+    "caption": "A dark, green, plastic, smooth plastic surface texture.",
+    "_stub": true
+  },
+  "th_brown_mud_leaves_001": {
+    "material_type": "ground",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "forest, grass, moss, mud, natural, orange, outdoors, stones, terrain",
+    "caption": "A forest, grass, moss, mud ground surface texture.",
+    "_stub": true
+  },
+  "tc_metal_029": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "dent, galvanized, hammered, iron, metal, oxidation, rust, rusty, scratch, shiny, silver, tin, zinc",
+    "caption": "A dent, galvanized, hammered, iron metal surface texture.",
+    "_stub": true
+  },
+  "2119_corten_steel": {
+    "material_type": "metal",
+    "colors": [
+      "black",
+      "brown",
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "appearance, artistic, black, brown, chaotic, colors, corroded, distressed, earth, effect, faded, grunge, marbled, mixed, old, pattern, rough, splotchy, tones, vintage, weathered, white",
+    "caption": "A appearance, artistic, black, brown metal surface texture.",
+    "_stub": true
+  },
+  "acg_concrete_026": {
+    "material_type": "concrete",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cement, concrete, light, moss",
+    "caption": "A cement, concrete, light, moss concrete surface texture.",
+    "_stub": true
+  },
+  "acg_metal_026": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "leaks, metal, old, rust, rusty, spots, steel",
+    "caption": "A leaks, metal, old, rust metal surface texture.",
+    "_stub": true
+  },
+  "th_brick_wall_005": {
+    "material_type": "terracotta",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, chip, concrete, damage, man, rough, uneven, wall",
+    "caption": "A brick, chip, concrete, damage terracotta surface texture.",
+    "_stub": true
+  },
+  "0844_syntetic_foam": {
+    "material_type": "misc",
+    "colors": [
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "bumpy, close, hues, material, ochre, organic, pattern, patterned, porous, rugged, synthetic, uneven, wallpaper, yellow",
+    "caption": "A bumpy, close, hues, material misc surface texture.",
+    "_stub": true
+  },
+  "acg_wood_floor_060": {
+    "material_type": "wood",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "floor, versailles, wood",
+    "caption": "A floor, versailles, wood wood surface texture.",
+    "_stub": true
+  },
+  "0559_brick_uneven_stones": {
+    "material_type": "ceramic",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, cobblestone, dark, gritty, hard, historic, look, material, old, outdoor, path, paving, rough, solid, stone, tones, uneven, weathered",
+    "caption": "A brown, cobblestone, dark, gritty ceramic surface texture.",
+    "_stub": true
+  },
+  "acg_roofing_tiles_006": {
+    "material_type": "terracotta",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, carrelage, clean, modern, roofing, tiled, tiles",
+    "caption": "A brown, carrelage, clean, modern terracotta surface texture.",
+    "_stub": true
+  },
+  "1587_cobblestones": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cobblestone, colors, earth, flooring, granite, irregular, like, multicolored, natural, outdoor, path, pattern, pavement, rough, seamless, stone, stones, tones, weathered",
+    "caption": "A cobblestone, colors, earth, flooring stone surface texture.",
+    "_stub": true
+  },
+  "2140_basic_steel": {
+    "material_type": "metal",
+    "colors": [
+      "gray"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "alike, color, concrete, gray, industrial, like, look, material, matte, monochrome, neutral, pattern, plaster, potential, rough, sample, seamless, speckled, subtle, wall",
+    "caption": "A alike, color, concrete, gray metal surface texture.",
+    "_stub": true
+  },
+  "acg_paving_stones_009": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cobble, pavement, stone, stones",
+    "caption": "A cobble, pavement, stone, stones stone surface texture.",
+    "_stub": true
+  },
+  "acg_wood_026": {
+    "material_type": "wood",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, clean, fine, smooth, wood, wooden",
+    "caption": "A brown, clean, fine, smooth wood surface texture.",
+    "_stub": true
+  },
+  "2128_basic_steel": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "",
+    "caption": "A metal surface texture.",
+    "_stub": true
+  },
+  "1684_leather_tiles": {
+    "material_type": "leather",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ambient, artistic, contemporary, dark, design, floor, geometric, glow, illuminated, interlocking, lighting, material, modern, orange, patterned, rectangular, shapes, styling, tiled, wall",
+    "caption": "A ambient, artistic, contemporary, dark leather surface texture.",
+    "_stub": true
+  },
+  "acg_painted_metal_015": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "metal, paint, painted, rust",
+    "caption": "A metal, paint, painted, rust metal surface texture.",
+    "_stub": true
+  },
+  "acg_painted_bricks_002": {
+    "material_type": "terracotta",
+    "colors": [
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, damage, paint, painted, scratch, scratched, wall, yellow",
+    "caption": "A brick, damage, paint, painted terracotta surface texture.",
+    "_stub": true
+  },
+  "acg_fabric_076": {
+    "material_type": "fabric",
+    "colors": [
+      "blue",
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "blue, fabric, white",
+    "caption": "A blue, fabric, white fabric surface texture.",
+    "_stub": true
+  },
+  "js_tactile_blocks_plastic": {
+    "material_type": "plastic",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "block, plastic, tactile",
+    "caption": "A block, plastic, tactile plastic surface texture.",
+    "_stub": true
+  },
+  "acg_rock_006": {
+    "material_type": "ground",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cliff, mountain, rock, stone",
+    "caption": "A cliff, mountain, rock, stone ground surface texture.",
+    "_stub": true
+  },
+  "acg_bark_012": {
+    "material_type": "wood",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "bark, brown, oak, tree",
+    "caption": "A bark, brown, oak, tree wood surface texture.",
+    "_stub": true
+  },
+  "2136_basic_steel": {
+    "material_type": "metal",
+    "colors": [
+      "gray"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "aluminum, brushed, gradient, gray, industrial, metal, metallic, orientation, reflective, shiny, silver, sleek, smooth, steel, vertical",
+    "caption": "A aluminum, brushed, gradient, gray metal surface texture.",
+    "_stub": true
+  },
+  "st_white_ceramic": {
+    "material_type": "ceramic",
+    "colors": [
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ceramic, seamless, white",
+    "caption": "A ceramic, seamless, white ceramic surface texture.",
+    "_stub": true
+  },
+  "acg_leather_001": {
+    "material_type": "leather",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, fabric, leather, smooth",
+    "caption": "A brown, fabric, leather, smooth leather surface texture.",
+    "_stub": true
+  },
+  "1349_metal_bumpy_squares": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "contemporary, dark, design, detail, embossments, end, finish, high, industrial, luxury, material, metallic, modern, patterned, reflective, shiny, square, studded",
+    "caption": "A contemporary, dark, design, detail metal surface texture.",
+    "_stub": true
+  },
+  "acg_asphalt_021": {
+    "material_type": "concrete",
+    "colors": [
+      "gray",
+      "grey"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "asphalt, crack, cracked, dark, gray, grey",
+    "caption": "A asphalt, crack, cracked, dark concrete surface texture.",
+    "_stub": true
+  },
+  "1345_metal_bumpy_squares": {
+    "material_type": "metal",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, close, contemporary, design, detail, geometric, gradient, holes, industrial, material, metallic, modern, patterned, perforated, reflective, shapes, shimmering, silver, square",
+    "caption": "A black, close, contemporary, design metal surface texture.",
+    "_stub": true
+  },
+  "st_camouflage_023": {
+    "material_type": "fabric",
+    "colors": [
+      "green",
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "camouflage, green, white",
+    "caption": "A camouflage, green, white fabric surface texture.",
+    "_stub": true
+  },
+  "tc_marble_013": {
+    "material_type": "marble",
+    "colors": [
+      "black",
+      "gray",
+      "grey",
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "architectural, black, checker, classical, floor, glossy, gray, grey, marble, pattern, shiny, square, tile, traditional, white",
+    "caption": "A architectural, black, checker, classical marble surface texture.",
+    "_stub": true
+  },
+  "0557_brick_uneven_stones": {
+    "material_type": "ceramic",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ancient, blocks, brown, cobblestone, durable, hard, path, pattern, pavement, rough, seamless, solid, square, stone, traditional, weathered",
+    "caption": "A ancient, blocks, brown, cobblestone ceramic surface texture.",
+    "_stub": true
+  },
+  "tc_plastic_019": {
+    "material_type": "plastic",
+    "colors": [
+      "blue"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "blue, cover, fabric, plastic, sheet, tarp",
+    "caption": "A blue, cover, fabric, plastic plastic surface texture.",
+    "_stub": true
+  },
+  "st_ceramic_022": {
+    "material_type": "ceramic",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, flower, tiling",
+    "caption": "A black, flower, tiling ceramic surface texture.",
+    "_stub": true
+  },
+  "tc_others_035": {
+    "material_type": "misc",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "concave, decor, decoration, hole, metal, net, network, orange, silver, wall",
+    "caption": "A concave, decor, decoration, hole misc surface texture.",
+    "_stub": true
+  },
+  "acg_metal_047_a": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "clean, copper, metal, shiny",
+    "caption": "A clean, copper, metal, shiny metal surface texture.",
+    "_stub": true
+  },
+  "acg_paving_stones_082": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "interlock, paved, pavement, stones",
+    "caption": "A interlock, paved, pavement, stones stone surface texture.",
+    "_stub": true
+  },
+  "acg_fabric_051": {
+    "material_type": "fabric",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, fabric, pattern, tartan",
+    "caption": "A black, fabric, pattern, tartan fabric surface texture.",
+    "_stub": true
+  },
+  "acg_leather_008": {
+    "material_type": "leather",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, crocodile, dark, leather, skin, snake",
+    "caption": "A black, crocodile, dark, leather leather surface texture.",
+    "_stub": true
+  },
+  "tc_plastic_004": {
+    "material_type": "plastic",
+    "colors": [
+      "black",
+      "red"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "acoustic, black, checker, foam, panel, plastic, red, soft, sound, soundproof, studio, tile, wedge",
+    "caption": "A acoustic, black, checker, foam plastic surface texture.",
+    "_stub": true
+  },
+  "acg_asphalt_018": {
+    "material_type": "concrete",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "asphalt, damage, road, street",
+    "caption": "A asphalt, damage, road, street concrete surface texture.",
+    "_stub": true
+  },
+  "1581_cobblestones": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cobblestone, earth, grunge, irregular, mosaic, multicolored, natural, pattern, pavement, rock, rustic, seamless, shapes, stone, tones",
+    "caption": "A cobblestone, earth, grunge, irregular stone surface texture.",
+    "_stub": true
+  },
+  "acg_granite_002_a": {
+    "material_type": "marble",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "countertop, granite",
+    "caption": "A countertop, granite marble surface texture.",
+    "_stub": true
+  },
+  "js_tiles_bricks_001": {
+    "material_type": "terracotta",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, tiles",
+    "caption": "A brick, tiles terracotta surface texture.",
+    "_stub": true
+  },
+  "st_marble_038": {
+    "material_type": "marble",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "architectural, black, interior, marble, portoro",
+    "caption": "A architectural, black, interior, marble marble surface texture.",
+    "_stub": true
+  },
+  "1586_cobblestones": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cobblestone, dry, earth, granular, hard, irregular, masonry, material, multicolored, natural, old, pattern, paving, rock, rough, seamless, shapes, stone, stones, tones, uneven, wall, weathered",
+    "caption": "A cobblestone, dry, earth, granular stone surface texture.",
+    "_stub": true
+  },
+  "th_gray_rocks": {
+    "material_type": "ground",
+    "colors": [
+      "gray"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "gray, natural, outdoors, rock, rocks, rocky, rough, terrain, uneven",
+    "caption": "A gray, natural, outdoors, rock ground surface texture.",
+    "_stub": true
+  },
+  "1347_metal_bumpy_squares": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ambient, cutouts, dark, decorative, diamond, durable, hard, industrial, lighting, matte, metal, metallic, pattern, perforated, rough, shadow, shaped, squares",
+    "caption": "A ambient, cutouts, dark, decorative metal surface texture.",
+    "_stub": true
+  },
+  "acg_fabric_009": {
+    "material_type": "fabric",
+    "colors": [
+      "red"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "diamond, fabric, rectangle, red, square",
+    "caption": "A diamond, fabric, rectangle, red fabric surface texture.",
+    "_stub": true
+  },
+  "th_fabric_leather_002": {
+    "material_type": "leather",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "char, clean, couch, fabric, leather, man, seat",
+    "caption": "A char, clean, couch, fabric leather surface texture.",
+    "_stub": true
+  },
+  "2113_corten_steel": {
+    "material_type": "metal",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, dark, design, elegant, finish, grunge, luxury, marble, material, matte, natural, pattern, seamless, stone",
+    "caption": "A black, dark, design, elegant metal surface texture.",
+    "_stub": true
+  },
+  "acg_rocks_023": {
+    "material_type": "ground",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "irregular, pavement, pebble, rocks, round, uneven",
+    "caption": "A irregular, pavement, pebble, rocks ground surface texture.",
+    "_stub": true
+  },
+  "th_yellow_plaster_002": {
+    "material_type": "plaster",
+    "colors": [
+      "brown",
+      "tan",
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, cabin, concrete, crack, man, mud, old, outdoors, plank, plaster, plastered, rough, tan, uneven, wall, weathered, wood, wooden, yellow",
+    "caption": "A brown, cabin, concrete, crack plaster surface texture.",
+    "_stub": true
+  },
+  "acg_tiles_009": {
+    "material_type": "ceramic",
+    "colors": [
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "carrelage, clean, kitchen, subway, tiled, tiles, wall, white",
+    "caption": "A carrelage, clean, kitchen, subway ceramic surface texture.",
+    "_stub": true
+  },
+  "0848_syntetic_foam": {
+    "material_type": "misc",
+    "colors": [
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "accents, close, dark, design, fabric, like, material, mottled, patterned, rough, tones, uneven, wallpaper, warm, yellow",
+    "caption": "A accents, close, dark, design misc surface texture.",
+    "_stub": true
+  },
+  "th_snow_004": {
+    "material_type": "ground",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "dirty, field, mud, natural, outdoors, rough, snow, terrain, uneven",
+    "caption": "A dirty, field, mud, natural ground surface texture.",
+    "_stub": true
+  },
+  "cgbc_grunge_wall_003": {
+    "material_type": "concrete",
+    "colors": [
+      "grey"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "aged, building, durable, grey, like, material, mossy, porous, rough, solid, stained, stone, weathered",
+    "caption": "A aged, building, durable, grey concrete surface texture.",
+    "_stub": true
+  },
+  "0558_brick_uneven_stones": {
+    "material_type": "ceramic",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, cobblestone, durable, flooring, hardscape, historic, interlocking, old, outdoor, pathway, pavement, rectangular, rough, rustic, stone, uneven, weathered",
+    "caption": "A brown, cobblestone, durable, flooring ceramic surface texture.",
+    "_stub": true
+  },
+  "acg_painted_plaster_007": {
+    "material_type": "plaster",
+    "colors": [
+      "orange",
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, cracked, old, orange, paint, painted, plaster, wall, yellow",
+    "caption": "A brick, cracked, old, orange plaster surface texture.",
+    "_stub": true
+  },
+  "st_plaster_028": {
+    "material_type": "plaster",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "dirty, plaster, seamless",
+    "caption": "A dirty, plaster, seamless plaster surface texture.",
+    "_stub": true
+  },
+  "th_rough_plaster_003": {
+    "material_type": "plaster",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, man, old, outdoors, plaster, rough, uneven, wall, weathered",
+    "caption": "A brick, man, old, outdoors plaster surface texture.",
+    "_stub": true
+  },
+  "tc_food_024": {
+    "material_type": "misc",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "carrot, food, orange, organic, vegetable",
+    "caption": "A carrot, food, orange, organic misc surface texture.",
+    "_stub": true
+  },
+  "js_tech_plastic_grid_003_and_plastic_base": {
+    "material_type": "plastic",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "base, grid, plastic, tech",
+    "caption": "A base, grid, plastic, tech plastic surface texture.",
+    "_stub": true
+  },
+  "acg_chainmail_004": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "chainmail, fabric, knight, medival, metal",
+    "caption": "A chainmail, fabric, knight, medival metal surface texture.",
+    "_stub": true
+  },
+  "acg_tiles_017": {
+    "material_type": "stone",
+    "colors": [
+      "black",
+      "blue"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, blue, carrelage, dark, tiled, tiles",
+    "caption": "A black, blue, carrelage, dark stone surface texture.",
+    "_stub": true
+  },
+  "2115_corten_steel": {
+    "material_type": "metal",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "aged, burnt, colors, earth, grunge, material, mottled, orange, pattern, rustic, tones, warm",
+    "caption": "A aged, burnt, colors, earth metal surface texture.",
+    "_stub": true
+  },
+  "acg_leather_034_a": {
+    "material_type": "leather",
+    "colors": [
+      "black",
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, brown, dark, leather, stitched",
+    "caption": "A black, brown, dark, leather leather surface texture.",
+    "_stub": true
+  },
+  "tc_fabrics_058": {
+    "material_type": "fabric",
+    "colors": [
+      "black",
+      "brown",
+      "white",
+      "yellow"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, brown, checker, dogtooth, fabric, hounds, houndstooth, ivory, pattern, textile, tooth, white, yellow",
+    "caption": "A black, brown, checker, dogtooth fabric surface texture.",
+    "_stub": true
+  },
+  "js_leather_rough_001": {
+    "material_type": "leather",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "leather, rough",
+    "caption": "A leather, rough leather surface texture.",
+    "_stub": true
+  },
+  "acg_planks_003": {
+    "material_type": "wood",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "nail, plank, rough, wood, wooden",
+    "caption": "A nail, plank, rough, wood wood surface texture.",
+    "_stub": true
+  },
+  "tc_tiles_068": {
+    "material_type": "ceramic",
+    "colors": [
+      "blue"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "architectural, blue, ceramic, tile, triangle, wall",
+    "caption": "A architectural, blue, ceramic, tile ceramic surface texture.",
+    "_stub": true
+  },
+  "acg_paving_stones_037": {
+    "material_type": "concrete",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "floor, herringbone, pavement, rough, stone, stones",
+    "caption": "A floor, herringbone, pavement, rough concrete surface texture.",
+    "_stub": true
+  },
+  "1683_leather_tiles": {
+    "material_type": "leather",
+    "colors": [
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ambient, architectural, dark, detail, embossed, geometric, illuminated, industrial, light, lighting, material, modern, orange, pattern, repeating, square, tile, tiles",
+    "caption": "A ambient, architectural, dark, detail leather surface texture.",
+    "_stub": true
+  },
+  "acg_terrazzo_009": {
+    "material_type": "marble",
+    "colors": [
+      "white"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "colorful, terrazzo, white",
+    "caption": "A colorful, terrazzo, white marble surface texture.",
+    "_stub": true
+  },
+  "js_bricks_clay_001": {
+    "material_type": "terracotta",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brick, clay",
+    "caption": "A brick, clay terracotta surface texture.",
+    "_stub": true
+  },
+  "2111_corten_steel": {
+    "material_type": "metal",
+    "colors": [
+      "beige",
+      "gray"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "beige, colors, construction, decorative, design, elegant, gray, interior, luxury, marble, material, mottled, natural, neutral, pattern, spotted, stone, veins",
+    "caption": "A beige, colors, construction, decorative metal surface texture.",
+    "_stub": true
+  },
+  "2132_basic_steel": {
+    "material_type": "metal",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "ask, feel",
+    "caption": "A ask, feel metal surface texture.",
+    "_stub": true
+  },
+  "th_slate_driveway": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cement, concrete, cracked, driveway, exterior, floor, man, old, outdoors, rock, rough, slate, slates, stone, stonework, worn",
+    "caption": "A cement, concrete, cracked, driveway stone surface texture.",
+    "_stub": true
+  },
+  "tc_others_001": {
+    "material_type": "misc",
+    "colors": [
+      "red"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "blood, bump, flesh, intestine, meat, organ, organic, other, red",
+    "caption": "A blood, bump, flesh, intestine misc surface texture.",
+    "_stub": true
+  },
+  "tc_paint_001": {
+    "material_type": "plaster",
+    "colors": [
+      "brown",
+      "green"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "architectural, blister, blistered, blistering, brown, bubble, bubbling, bump, dent, floor, green, herringbone, other, paint, plank, plaster, rough, wall, worn",
+    "caption": "A architectural, blister, blistered, blistering plaster surface texture.",
+    "_stub": true
+  },
+  "0560_brick_uneven_stones": {
+    "material_type": "ceramic",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "brown, cobblestone, gritty, historic, interlocking, irregular, moss, old, outdoor, pathway, pavement, rugged, stones, traditional, weathered",
+    "caption": "A brown, cobblestone, gritty, historic ceramic surface texture.",
+    "_stub": true
+  },
+  "acg_wood_floor_026": {
+    "material_type": "wood",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "dark, dirty, floor, smudge, wood, wooden",
+    "caption": "A dark, dirty, floor, smudge wood surface texture.",
+    "_stub": true
+  },
+  "1570_cobblestones": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "cobblestone, construction, durable, earthy, flooring, irregular, material, mosaic, natural, outdoor, pattern, paving, rough, rustic, shapes, stone, tones",
+    "caption": "A cobblestone, construction, durable, earthy stone surface texture.",
+    "_stub": true
+  },
+  "0847_syntetic_foam": {
+    "material_type": "misc",
+    "colors": [
+      "brown"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "appearance, brown, bumpy, close, greenish, irregular, look, material, organic, pattern, rough, sample, spongy",
+    "caption": "A appearance, brown, bumpy, close misc surface texture.",
+    "_stub": true
+  },
+  "js_scifi_panels_014": {
+    "material_type": "misc",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "panel, scifi",
+    "caption": "A panel, scifi misc surface texture.",
+    "_stub": true
+  },
+  "th_grassy_cobblestone": {
+    "material_type": "stone",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "crazy, dirty, floor, grass, natural, outdoors, path, pathway, rock, sand, trampled",
+    "caption": "A crazy, dirty, floor, grass stone surface texture.",
+    "_stub": true
+  },
+  "tc_others_016": {
+    "material_type": "misc",
+    "colors": [
+      "black"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "bag, black, dirty, fold, folded, plastic, pvc, rubbish, trash, wrinkle, wrinkled",
+    "caption": "A bag, black, dirty, fold misc surface texture.",
+    "_stub": true
+  },
+  "cgbc_granite_005_small": {
+    "material_type": "marble",
+    "colors": [
+      "black",
+      "orange"
+    ],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "black, construction, design, elegant, finish, glossy, high, interior, luxury, marble, material, natural, orange, pattern, polished, resolution, seamless, stone, veins",
+    "caption": "A black, construction, design, elegant marble surface texture.",
+    "_stub": true
+  },
+  "js_tiles_001": {
+    "material_type": "ceramic",
+    "colors": [],
+    "pattern": "",
+    "surface_finish": "",
+    "condition": "",
+    "notable_features": "tiles",
+    "caption": "A tiles ceramic surface texture.",
+    "_stub": true
+  }
+}

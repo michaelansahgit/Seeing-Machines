@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 620" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#555"/>
+    </marker>
+    <style>
+      .box{rx:10;ry:10;stroke-width:1.5;}
+      .t{font-size:13px;fill:#1a1a1a;}
+      .tb{font-size:13px;font-weight:600;fill:#111;}
+      .sm{font-size:11px;fill:#555;}
+      .lane{font-size:12px;font-weight:700;letter-spacing:.5px;}
+      .edge{stroke:#555;stroke-width:1.6;fill:none;}
+    </style>
+  </defs>
+
+  <!-- background lanes -->
+  <rect x="10" y="60"  width="1160" height="300" fill="#f4f7fb" stroke="#dbe3ee" rx="12"/>
+  <rect x="10" y="376" width="1160" height="228" fill="#fbf6f2" stroke="#eedfce" rx="12"/>
+  <text x="26" y="52" class="lane" fill="#3a5a8c">OFFLINE · INDEX ONCE, CACHE TO DISK</text>
+  <text x="26" y="596" class="lane" fill="#a5642a">QUERY TIME</text>
+
+  <!-- Corpus -->
+  <rect class="box" x="30" y="150" width="150" height="120" fill="#ffffff" stroke="#c3cfe0"/>
+  <text x="105" y="180" text-anchor="middle" class="tb">Corpus</text>
+  <text x="105" y="200" text-anchor="middle" class="sm">MatSynth · 89</text>
+  <text x="105" y="216" text-anchor="middle" class="sm">basecolor maps</text>
+  <text x="105" y="232" text-anchor="middle" class="sm">512 px · 13 cats</text>
+  <text x="105" y="252" text-anchor="middle" class="sm">(known labels)</text>
+
+  <!-- CLIP image lane (L1) -->
+  <rect class="box" x="250" y="90" width="180" height="70" fill="#e8f0fb" stroke="#9db9e3"/>
+  <text x="340" y="118" text-anchor="middle" class="tb">CLIP image encoder</text>
+  <text x="340" y="136" text-anchor="middle" class="sm">ViT-B-32 · 224 px</text>
+  <text x="340" y="151" text-anchor="middle" class="sm">L1</text>
+
+  <rect class="box" x="470" y="90" width="170" height="70" fill="#ffffff" stroke="#9db9e3"/>
+  <text x="555" y="118" text-anchor="middle" class="tb">Image embeddings</text>
+  <text x="555" y="136" text-anchor="middle" class="sm">89 × 512, L2-normalised</text>
+  <text x="555" y="151" text-anchor="middle" class="sm">clip_image_embeds.npy</text>
+
+  <!-- VLM caption lane (L2) -->
+  <rect class="box" x="250" y="250" width="180" height="86" fill="#eef6ee" stroke="#a9cda9"/>
+  <text x="340" y="278" text-anchor="middle" class="tb">Gemma 3 4B (VLM)</text>
+  <text x="340" y="296" text-anchor="middle" class="sm">4-bit · Colab T4</text>
+  <text x="340" y="312" text-anchor="middle" class="sm">structured caption</text>
+  <text x="340" y="328" text-anchor="middle" class="sm">schema + prompt · L2</text>
+
+  <rect class="box" x="470" y="250" width="170" height="86" fill="#ffffff" stroke="#a9cda9"/>
+  <text x="555" y="282" text-anchor="middle" class="tb">Text encoder</text>
+  <text x="555" y="300" text-anchor="middle" class="sm">MiniLM-L6 → 384-d</text>
+  <text x="555" y="318" text-anchor="middle" class="sm">caption embeddings</text>
+
+  <!-- edges: corpus -> encoders -->
+  <path class="edge" d="M180,190 C215,190 220,125 248,125" marker-end="url(#arw)"/>
+  <path class="edge" d="M180,230 C215,230 220,292 248,292" marker-end="url(#arw)"/>
+  <path class="edge" d="M430,125 L468,125" marker-end="url(#arw)"/>
+  <path class="edge" d="M430,293 L468,293" marker-end="url(#arw)"/>
+
+  <!-- Query -->
+  <rect class="box" x="30" y="452" width="150" height="76" fill="#ffffff" stroke="#e2c39c"/>
+  <text x="105" y="482" text-anchor="middle" class="tb">Text query</text>
+  <text x="105" y="502" text-anchor="middle" class="sm">“rusty corroded</text>
+  <text x="105" y="518" text-anchor="middle" class="sm">metal”</text>
+
+  <!-- query encoders -->
+  <rect class="box" x="250" y="420" width="180" height="54" fill="#e8f0fb" stroke="#9db9e3"/>
+  <text x="340" y="443" text-anchor="middle" class="tb">CLIP text encoder</text>
+  <text x="340" y="461" text-anchor="middle" class="sm">→ 512-d query vector</text>
+
+  <rect class="box" x="250" y="500" width="180" height="54" fill="#eef6ee" stroke="#a9cda9"/>
+  <text x="340" y="523" text-anchor="middle" class="tb">MiniLM text encoder</text>
+  <text x="340" y="541" text-anchor="middle" class="sm">→ 384-d query vector</text>
+
+  <path class="edge" d="M180,478 C210,478 214,447 248,447" marker-end="url(#arw)"/>
+  <path class="edge" d="M180,502 C210,502 214,527 248,527" marker-end="url(#arw)"/>
+
+  <!-- cosine / routes -->
+  <rect class="box" x="470" y="420" width="180" height="54" fill="#eaf2ff" stroke="#7fa0d6"/>
+  <text x="560" y="443" text-anchor="middle" class="tb">Cosine sim → CLIP route</text>
+  <text x="560" y="461" text-anchor="middle" class="sm">query·image  (L1 baseline)</text>
+
+  <rect class="box" x="470" y="500" width="180" height="54" fill="#edf7ed" stroke="#8fbf8f"/>
+  <text x="560" y="523" text-anchor="middle" class="tb">Cosine sim → Caption route</text>
+  <text x="560" y="541" text-anchor="middle" class="sm">query·caption  (L2)</text>
+
+  <path class="edge" d="M430,447 L468,447" marker-end="url(#arw)"/>
+  <path class="edge" d="M430,527 L468,527" marker-end="url(#arw)"/>
+  <!-- cross links from cached embeddings down into cosine -->
+  <path class="edge" d="M555,162 C555,300 660,300 660,300 C720,300 700,418 655,432" marker-end="url(#arw)" stroke-dasharray="4 3"/>
+  <path class="edge" d="M600,336 C640,360 645,470 652,498" marker-end="url(#arw)" stroke-dasharray="4 3"/>
+
+  <!-- Hybrid fusion L3 -->
+  <rect class="box" x="700" y="452" width="150" height="70" fill="#f3e9fb" stroke="#b98fd6"/>
+  <text x="775" y="480" text-anchor="middle" class="tb">Hybrid fusion</text>
+  <text x="775" y="499" text-anchor="middle" class="sm">α·CLIP + (1−α)·cap</text>
+  <text x="775" y="514" text-anchor="middle" class="sm">L3</text>
+  <path class="edge" d="M650,451 C675,455 675,470 698,474" marker-end="url(#arw)"/>
+  <path class="edge" d="M650,523 C675,519 675,505 698,500" marker-end="url(#arw)"/>
+
+  <!-- top-k results -->
+  <rect class="box" x="905" y="452" width="120" height="70" fill="#ffffff" stroke="#b98fd6"/>
+  <text x="965" y="482" text-anchor="middle" class="tb">Top-k</text>
+  <text x="965" y="500" text-anchor="middle" class="sm">ranked</text>
+  <text x="965" y="515" text-anchor="middle" class="sm">materials</text>
+  <path class="edge" d="M850,487 L903,487" marker-end="url(#arw)"/>
+
+  <!-- L3 multimodal answer -->
+  <rect class="box" x="905" y="250" width="245" height="86" fill="#eef6ee" stroke="#a9cda9"/>
+  <text x="1027" y="278" text-anchor="middle" class="tb">Multimodal grounding (L3)</text>
+  <text x="1027" y="298" text-anchor="middle" class="sm">top 3–4 images → Gemma context</text>
+  <text x="1027" y="314" text-anchor="middle" class="sm">→ grounded answer (Colab)</text>
+  <text x="1027" y="330" text-anchor="middle" class="sm">quality degrades as #images ↑</text>
+  <path class="edge" d="M965,450 C965,400 1000,360 1010,338" marker-end="url(#arw)"/>
+
+  <!-- evaluation -->
+  <rect class="box" x="1050" y="452" width="100" height="86" fill="#fff8e6" stroke="#e6c65a"/>
+  <text x="1100" y="480" text-anchor="middle" class="tb">Eval</text>
+  <text x="1100" y="500" text-anchor="middle" class="sm">precision@k</text>
+  <text x="1100" y="515" text-anchor="middle" class="sm">3 routes</text>
+  <text x="1100" y="530" text-anchor="middle" class="sm">gold set · L3</text>
+  <path class="edge" d="M1025,495 L1048,495" marker-end="url(#arw)"/>
+
+  <text x="590" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#111">Seeing Machines — multimodal retrieval pipeline (L1 → L2 → L3)</text>
+</svg>
